@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenClaw 资源下载 - 配置模板、工具包、插件合集">
+    <title>资源下载 | OpenClaw 资源站</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">⚡ OpenClaw 资源站</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="install.html">安装教程</a></li>
+                <li><a href="resources.html" class="active">资源下载</a></li>
+                <li><a href="blog.html">文章</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>📦 资源下载</h1>
+            <p>配置模板、工具包、人格预设 — 开箱即用</p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="container">
+
+            <h2>🧠 AI 人格预设</h2>
+            <p>拿来即用的 SOUL.md 配置文件，让你的 AI 拥有不同性格。</p>
+
+            <div class="resource-card">
+                <h3>💰 外贸业务员 · 大料</h3>
+                <p>成熟稳重的外贸老鸟人格，擅长市场调研、开发信撰写。适合外贸从业者。</p>
+                <a href="#" class="btn-small" onclick="alert('即将上线')">📥 下载</a>
+            </div>
+
+            <div class="resource-card">
+                <h3>📝 文案写手</h3>
+                <p>创意爆棚的文案人格，写小红书、公众号、广告文案效率拉满。</p>
+                <a href="#" class="btn-small" onclick="alert('即将上线')">📥 下载</a>
+            </div>
+
+            <div class="resource-card">
+                <h3>🎓 学习助手</h3>
+                <p>耐心细致的辅导人格，适合学习答疑、知识整理、笔记总结。</p>
+                <a href="#" class="btn-small" onclick="alert('即将上线')">📥 下载</a>
+            </div>
+
+            <div class="resource-card">
+                <h3>🧘 生活管家</h3>
+                <p>贴心管家人格，管理日程、待办、提醒，保持生活有序。</p>
+                <a href="#" class="btn-small" onclick="alert('即将上线')">📥 下载</a>
+            </div>
+
+            <h2>⚙️ 配置文件模板</h2>
+
+            <div class="resource-card">
+                <h3>openclaw.json 基础配置</h3>
+                <p>开箱可用的完整配置文件，DeepSeek + QQ Bot 预配。</p>
+                <pre><code>{
+  "agents": { "default": { "model": "deepseek/deepseek-v4-flash" } },
+  "channels": {
+    "qqbot": { "enabled": true, "allowFrom": ["*"] }
+  },
+  "heartbeat": { "main": { "interval": 1800 } }
+}</code></pre>
+            </div>
+
+            <div class="resource-card">
+                <h3>TOOLS.md 模板</h3>
+                <p>技能与工具管理模板，方便快速组织你的 AI 能力清单。</p>
+                <a href="#" class="btn-small" onclick="alert('即将上线')">📥 下载</a>
+            </div>
+
+            <h2>📚 教程文档</h2>
+
+            <div class="resource-card">
+                <h3>🚀 从零开始 · OpenClaw 完全指南</h3>
+                <p>从安装到配置到进阶玩法，12 页完整教程（PDF）。</p>
+                <a href="#" class="btn-small" onclick="alert('即将上线')">📥 下载 PDF</a>
+            </div>
+
+            <div class="resource-card">
+                <h3>🔌 渠道接入速查表</h3>
+                <p>QQ Bot、微信、企业微信、Discord、Telegram 一键接入对照表。</p>
+                <a href="#" class="btn-small" onclick="alert('即将上线')">📥 下载</a>
+            </div>
+
+            <div class="warn-box" style="margin-top: 32px;">
+                ⚠️ 资源站刚开始搭建，资源陆续上传中。如果你有想要的模板或配置，欢迎在评论区留言！
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>⚡ OpenClaw 资源站</h3>
+                    <p>开源AI助理的一站式教程与资源平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="install.html">安装教程</a></li>
+                        <li><a href="resources.html">资源下载</a></li>
+                        <li><a href="blog.html">文章列表</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>相关资源</h3>
+                    <ul>
+                        <li><a href="https://github.com/openclaw/openclaw" target="_blank">GitHub 仓库</a></li>
+                        <li><a href="https://docs.openclaw.ai" target="_blank">官方文档</a></li>
+                        <li><a href="https://clawhub.ai" target="_blank">ClawHub 技能市场</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OpenClaw 资源站 · 本站与 OpenClaw 官方无隶属关系</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
