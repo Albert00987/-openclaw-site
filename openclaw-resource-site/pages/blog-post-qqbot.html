@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何将 OpenClaw 接入 QQ Bot | OpenClaw 资源站</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">⚡ OpenClaw 资源站</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="install.html">安装教程</a></li>
+                <li><a href="resources.html">资源下载</a></li>
+                <li><a href="blog.html">文章</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>📱 如何将 OpenClaw 接入 QQ Bot</h1>
+            <p>手机 QQ 随时指挥你的 AI 助理 | 2026年5月10日</p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="container">
+            <p>装好了 OpenClaw，但每次都要打开浏览器才能用？把它接上 QQ Bot，以后在手机上发个消息就能指挥 AI。</p>
+
+            <div class="tip-box">
+                💡 这是最推荐的远程使用方式。QQ 的机器人接口稳定、免费，而且不需要企业资质。
+            </div>
+
+            <h2>前提条件</h2>
+            <ul>
+                <li>✅ OpenClaw 已安装并正常运行</li>
+                <li>✅ 一个 QQ 账号（个人号即可）</li>
+                <li>✅ 10 分钟时间</li>
+            </ul>
+
+            <h2>第一步：注册 QQ 机器人</h2>
+            <ol>
+                <li>打开 <a href="https://q.qq.com" target="_blank">QQ 开放平台</a></li>
+                <li>用你的 QQ 号登录</li>
+                <li>点击"创建机器人"</li>
+                <li>填写基本信息（机器人名称、头像、介绍）</li>
+                <li>创建成功后，进入"开发设置"页面</li>
+                <li>记下 <strong>AppID</strong> 和 <strong>Client Secret</strong>（不要泄露！）</li>
+            </ol>
+            <div class="warn-box">
+                ⚠️ 机器人创建后需要审核，通常 1-2 个工作日。但你可以先配置好，审核通过直接使用。
+            </div>
+
+            <h2>第二步：配置 OpenClaw</h2>
+            <p>在终端中依次执行以下命令：</p>
+            <pre><code>openclaw config set channels.qqbot.appId "你的AppID"
+openclaw config set channels.qqbot.clientSecret "你的ClientSecret"
+openclaw config set channels.qqbot.allowFrom '["*"]'</code></pre>
+
+            <h2>第三步：重启 Gateway</h2>
+            <pre><code>openclaw gateway restart</code></pre>
+
+            <h2>第四步：添加机器人为好友</h2>
+            <p>在 QQ 中搜索你的机器人（用 AppID 或机器人名称），加为好友。发送任意消息，就能和 AI 对话了。</p>
+            <div class="tip-box">
+                💡 如果发送消息后没有回复，检查终端日志：<code>openclaw logs --tail 20</code>
+            </div>
+
+            <h2>🎉 完成！</h2>
+            <p>现在你可以在 QQ 上随时指挥你的 AI 助理了。试试发一条"帮我查一下今天的天气"或"整理一下我的待办事项"。</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>⚡ OpenClaw 资源站</h3>
+                    <p>开源AI助理的一站式教程与资源平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="install.html">安装教程</a></li>
+                        <li><a href="resources.html">资源下载</a></li>
+                        <li><a href="blog.html">文章列表</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OpenClaw 资源站</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
