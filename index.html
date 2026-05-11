@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenClaw 资源站 - 开源个人AI助理，教程、工具、模板一站式资源平台">
+    <meta name="keywords" content="OpenClaw, AI助理, 开源AI, 人工智能, 效率工具">
+    <title>OpenClaw 资源站 | 开源AI助理一站式教程</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6856391807962529" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">⚡ OpenClaw 资源站</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="pages/install.html">安装教程</a></li>
+                <li><a href="pages/resources.html">资源下载</a></li>
+                <li><a href="pages/blog.html">文章</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <header class="hero">
+        <div class="container">
+            <h1>你的专属 AI 助理</h1>
+            <p class="hero-subtitle">开源 · 自由 · 强大 — 装在你的电脑上，数据完全属于你</p>
+            <div class="hero-actions">
+                <a href="pages/install.html" class="btn btn-primary">📥 开始安装</a>
+                <a href="https://github.com/openclaw/openclaw" target="_blank" class="btn btn-outline">🌟 GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 特性区 -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择 OpenClaw？</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>数据隐私</h3>
+                    <p>运行在你的电脑上，数据不出门。不依赖任何第三方云服务。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>多平台接入</h3>
+                    <p>支持微信、QQ、企业微信、Discord、Telegram等多个聊天平台。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>多种AI模型</h3>
+                    <p>支持 DeepSeek、Claude、GPT 等数十种主流AI模型，自由切换。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>自动巡检</h3>
+                    <p>定时心跳检查，主动汇报消息、待办、日程，24小时在线。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>高度可定制</h3>
+                    <p>修改 SOUL.md 自定义AI人格，打造专属风格助理。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>完全免费</h3>
+                    <p>开源项目，零成本部署。搭配免费模型API，不花一分钱。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 广告位 -->
+    <div class="ad-container">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6856391807962529" data-ad-slot="1234567890" data-ad-format="auto"></ins>
+    </div>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <!-- 快速入门 -->
+    <section class="quickstart">
+        <div class="container">
+            <h2 class="section-title">一键启动</h2>
+            <div class="code-block">
+                <code>npm install -g openclaw && openclaw dev</code>
+                <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+            </div>
+            <p class="quickstart-note">装完 Node.js 后，在终端粘贴这行命令即可。</p>
+            <div class="quickstart-steps">
+                <div class="step">
+                    <span class="step-num">1</span>
+                    <div>
+                        <h4>安装 Node.js</h4>
+                        <p><a href="https://nodejs.org" target="_blank">nodejs.org</a> 下载最新版</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">2</span>
+                    <div>
+                        <h4>运行安装命令</h4>
+                        <p>上面的一行命令，复制粘贴到终端</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">3</span>
+                    <div>
+                        <h4>打开浏览器</h4>
+                        <p>访问 <code>http://localhost:18789</code> 开始配置</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新文章 -->
+    <section class="latest-posts">
+        <div class="container">
+            <h2 class="section-title">最新文章</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <div class="post-meta">2026-05-09 · 安装指南</div>
+                    <h3><a href="pages/install.html">OpenClaw 零基础安装教程（Windows/Mac/Linux）</a></h3>
+                    <p>从零开始，手把手教你装好你的AI助理。小白也能搞定。</p>
+                </article>
+                <article class="post-card">
+                    <div class="post-meta">2026-05-09 · 进阶教程</div>
+                    <h3><a href="pages/install.html#qq">如何将 OpenClaw 接入 QQ Bot</a></h3>
+                    <p>配好QQ机器人，出门在外也能给你的AI下达指令。</p>
+                </article>
+                <article class="post-card">
+                    <div class="post-meta">2026-05-09 · 进阶教程</div>
+                    <h3><a href="pages/install.html#wechat">微信接入指南</a></h3>
+                    <p>扫码登录，把AI装进你的微信里。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>⚡ OpenClaw 资源站</h3>
+                    <p>开源AI助理的一站式教程与资源平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="pages/install.html">安装教程</a></li>
+                        <li><a href="pages/resources.html">资源下载</a></li>
+                        <li><a href="pages/blog.html">文章列表</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>相关资源</h3>
+                    <ul>
+                        <li><a href="https://github.com/openclaw/openclaw" target="_blank">GitHub 仓库</a></li>
+                        <li><a href="https://docs.openclaw.ai" target="_blank">官方文档</a></li>
+                        <li><a href="https://clawhub.ai" target="_blank">ClawHub 技能市场</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OpenClaw 资源站 · <a href="pages/privacy.html">隐私政策</a> · 本站与 OpenClaw 官方无隶属关系</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenClaw 安装教程 - Windows/Mac/Linux 零基础手把手教学，5分钟让你的电脑拥有AI助理">
+    <title>OpenClaw 零基础安装教程（全平台） | OpenClaw 资源站</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6856391807962529" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">⚡ OpenClaw 资源站</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="install.html">安装教程</a></li>
+                <li><a href="resources.html">资源下载</a></li>
+                <li><a href="blog.html">文章</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>📥 OpenClaw 零基础安装教程</h1>
+            <p>Windows · Mac · Linux 全平台覆盖 | 2026年5月10日</p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="container">
+            <p>还在用网页版 AI 聊天？试试把自己的 AI 助理装在电脑上——数据归你、24小时在线、还能接入微信和QQ。</p>
+            <p>OpenClaw 是一个开源的个人 AI 系统。这篇教程带你从零开始，5 分钟装好。</p>
+
+            <div class="tip-box">
+                💡 <strong>你需要：</strong>一台能上网的电脑 + 5 分钟时间。不需要编程基础。
+            </div>
+
+            <h2>第一步：安装 Node.js</h2>
+            <p>OpenClaw 基于 Node.js 运行。打开 <a href="https://nodejs.org" target="_blank">nodejs.org</a>，下载最新 <strong>LTS 版本</strong>（推荐大多数人用的稳定版）。</p>
+
+            <h3>Windows 用户</h3>
+            <p>下载 <code>.msi</code> 安装包 → 双击运行 → 一路点"Next" → 装完重启终端（CMD 或 PowerShell）。</p>
+
+            <h3>Mac 用户</h3>
+            <p>下载 <code>.pkg</code> 安装包 → 双击安装。或者用 Homebrew：</p>
+            <pre><code>brew install node</code></pre>
+
+            <h3>Linux 用户（Ubuntu/Debian）</h3>
+            <pre><code>curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs</code></pre>
+
+            <h3>验证安装</h3>
+            <p>打开终端，运行以下命令，看到版本号就说明装好了：</p>
+            <pre><code>node --version
+npm --version</code></pre>
+
+            <h2>第二步：安装 OpenClaw</h2>
+            <p>在终端输入一行命令：</p>
+            <pre><code>npm install -g openclaw</code></pre>
+            <p>等进度条跑完（约 30 秒到 1 分钟，取决于你的网速）。</p>
+            <div class="warn-box">
+                ⚠️ Mac/Linux 如果遇到权限错误，加 <code>sudo</code>：<code>sudo npm install -g openclaw</code>
+            </div>
+
+            <h2>第三步：启动</h2>
+            <pre><code>openclaw dev</code></pre>
+            <p>首次启动会自动初始化配置，稍等几秒。</p>
+
+            <h2>第四步：打开 Web 界面</h2>
+            <p>打开浏览器，访问：</p>
+            <pre><code>http://localhost:18789</code></pre>
+            <p>你会看到一个漂亮的设置向导。</p>
+
+            <h2>第五步：配置 AI 模型</h2>
+            <p>在向导中选择一个 AI 模型。新手推荐 <strong>DeepSeek</strong>：</p>
+            <ol>
+                <li>在模型列表中选择 <strong>DeepSeek</strong></li>
+                <li>去 <a href="https://platform.deepseek.com" target="_blank">platform.deepseek.com</a> 注册账号，获取 API Key</li>
+                <li>把 API Key 粘贴到配置页面 → 保存</li>
+            </ol>
+            <div class="tip-box">
+                💡 DeepSeek 是目前性价比最高的选择。注册送 500 万 token，中文能力强，价格低。够个人用好几个月。
+            </div>
+
+            <h2>🎉 搞定了！</h2>
+            <p>现在你的 AI 助理已经开始运行了。继续配置以下功能，让它变得更强：</p>
+            <ul>
+                <li><strong>接入 QQ Bot</strong> — 用手机 QQ 随时指挥你的 AI</li>
+                <li><strong>接入微信</strong> — 扫码登录，微信上直接对话</li>
+                <li><strong>设置心跳巡检</strong> — AI 每 30 分钟自动检查消息、待办、日程</li>
+                <li><strong>自定义人格</strong> — 修改配置文件，让 AI 拥有专属性格</li>
+            </ul>
+
+            <h2>❓ 常见问题</h2>
+            <h3>Q：端口被占用怎么办？</h3>
+            <p>启动时指定其他端口：<code>openclaw dev --port 18888</code></p>
+
+            <h3>Q：怎么修改 AI 的性格？</h3>
+            <p>编辑 <code>~/.openclaw/workspace/SOUL.md</code> 文件，写入你想要的风格即可。</p>
+
+            <h3>Q：安装报错了怎么办？</h3>
+            <p>最常见的原因是网络问题或权限问题。尝试：</p>
+            <ul>
+                <li>Mac/Linux：加 <code>sudo</code> 重试</li>
+                <li>Windows：以管理员身份运行终端</li>
+                <li>切换网络环境（比如手机热点）再试</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>⚡ OpenClaw 资源站</h3>
+                    <p>开源AI助理的一站式教程与资源平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="install.html">安装教程</a></li>
+                        <li><a href="resources.html">资源下载</a></li>
+                        <li><a href="blog.html">文章列表</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OpenClaw 资源站</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
