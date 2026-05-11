@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenClaw 零基础安装教程 - Windows/Mac/Linux 手把手教学">
+    <title>OpenClaw 安装教程 | 零基础手把手教学</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6856391807962529" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">⚡ OpenClaw 资源站</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="install.html" class="active">安装教程</a></li>
+                <li><a href="resources.html">资源下载</a></li>
+                <li><a href="blog.html">文章</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>📥 OpenClaw 安装教程</h1>
+            <p>从零开始，手把手装好你的 AI 助理</p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="container">
+
+            <h2>📋 安装前准备</h2>
+            <p>你只需要：一台能上网的电脑（Windows / Mac / Linux 都可以），以及 5 分钟时间。</p>
+            <div class="tip-box">
+                💡 <strong>最低配置：</strong>2GB 内存，500MB 磁盘空间即可。OpenClaw 本身很轻量。
+            </div>
+
+            <h2>Step 1：安装 Node.js</h2>
+            <p>OpenClaw 基于 Node.js 运行，所以第一步先装它。</p>
+            <p>👉 打开 <a href="https://nodejs.org" target="_blank">nodejs.org</a>，下载最新版本的 <strong>LTS</strong>（长期支持版）</p>
+            <h3>各系统安装方式：</h3>
+            <h4>Windows</h4>
+            <p>下载 .msi 安装包 → 双击运行 → 一路"下一步"装完即可。完成后重启终端（CMD 或 PowerShell）。</p>
+            
+            <h4>Mac</h4>
+            <p>下载 .pkg 安装包 → 双击运行 → 一路安装完成。或通过 Homebrew：</p>
+            <pre><code>brew install node</code></pre>
+
+            <h4>Linux（Ubuntu/Debian）</h4>
+            <pre><code>curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs</code></pre>
+
+            <h3>验证安装</h3>
+            <p>打开终端，输入以下命令，看到版本号就说明装好了：</p>
+            <pre><code>node --version
+npm --version</code></pre>
+
+            <h2>Step 2：安装 OpenClaw</h2>
+            <p>一行命令搞定安装：</p>
+            <pre><code>npm install -g openclaw</code></pre>
+            <p>等待进度条跑完（约 30 秒 - 1 分钟，取决于网速）。</p>
+            <div class="tip-box">
+                💡 <strong>Mac/Linux 用户</strong>如果遇到权限错误，加 <code>sudo</code>：
+                <pre><code>sudo npm install -g openclaw</code></pre>
+            </div>
+
+            <h2>Step 3：启动 OpenClaw</h2>
+            <p>安装完成后，运行：</p>
+            <pre><code>openclaw dev</code></pre>
+            <p>首次启动会自动初始化配置。</p>
+
+            <h2>Step 4：打开 Web 界面</h2>
+            <p>打开浏览器，访问：</p>
+            <pre><code>http://localhost:18789</code></pre>
+            <p>你会看到一个设置向导界面。</p>
+
+            <h2>Step 5：配置 AI 模型</h2>
+            <p>在向导中选择一个 AI 模型。推荐新手用 <strong>DeepSeek</strong>：</p>
+            <ol>
+                <li>在模型列表中选择 <strong>DeepSeek</strong></li>
+                <li>注册 <a href="https://platform.deepseek.com" target="_blank">DeepSeek 账号</a> 获取 API Key</li>
+                <li>把 API Key 填入配置页面</li>
+                <li>点击保存，搞定！</li>
+            </ol>
+            <div class="tip-box">
+                💡 <strong>省钱窍门：</strong>DeepSeek 价格最便宜，中文能力也好。注册送 500 万 token，够用很久。
+            </div>
+
+            <h2 id="qq">🎯 进阶：接入 QQ Bot</h2>
+            <p>配好之后，你在 QQ 上就能直接和 AI 聊天了。</p>
+            <h3>步骤：</h3>
+            <ol>
+                <li>去 <a href="https://q.qq.com" target="_blank">QQ 开放平台</a> 注册一个机器人应用</li>
+                <li>获取 appId 和 clientSecret</li>
+                <li>在终端运行：</li>
+            </ol>
+            <pre><code>openclaw config set channels.qqbot.appId "你的appId"
+openclaw config set channels.qqbot.clientSecret "你的Secret"
+openclaw config set channels.qqbot.allowFrom '["*"]'
+openclaw gateway restart</code></pre>
+
+            <h2 id="wechat">🎯 进阶：接入微信</h2>
+            <p>扫码登录，微信上就能使唤 AI：</p>
+            <pre><code>openclaw plugins install "@tencent-weixin/openclaw-weixin"
+openclaw config set plugins.entries.openclaw-weixin.enabled true
+openclaw gateway restart
+openclaw channels login --channel openclaw-weixin</code></pre>
+            <p>终端会弹出二维码，用微信扫码确认即可。</p>
+
+            <h2>❓ 常见问题</h2>
+            <h3>Q：安装提示权限错误？</h3>
+            <p>Mac/Linux 用 <code>sudo</code> 前缀运行安装命令。Windows 以管理员身份打开终端。</p>
+            
+            <h3>Q：端口 18789 被占用了？</h3>
+            <p>启动时指定其他端口：</p>
+            <pre><code>openclaw dev --port 18888</code></pre>
+
+            <h3>Q：怎么改 AI 的性格？</h3>
+            <p>编辑 <code>~/.openclaw/workspace/SOUL.md</code> 文件，写下你想要它具备的人格特征。</p>
+
+            <div class="warn-box">
+                ⚠️ <strong>注意：</strong>OpenClaw 目前主要是终端/Web 界面，没有原生图形桌面客户端。但它可以通过 QQ、微信、Telegram 等聊天平台和你交互。
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>⚡ OpenClaw 资源站</h3>
+                    <p>开源AI助理的一站式教程与资源平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="install.html">安装教程</a></li>
+                        <li><a href="resources.html">资源下载</a></li>
+                        <li><a href="blog.html">文章列表</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>相关资源</h3>
+                    <ul>
+                        <li><a href="https://github.com/openclaw/openclaw" target="_blank">GitHub 仓库</a></li>
+                        <li><a href="https://docs.openclaw.ai" target="_blank">官方文档</a></li>
+                        <li><a href="https://clawhub.ai" target="_blank">ClawHub 技能市场</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OpenClaw 资源站 · <a href="privacy.html">隐私政策</a> · 本站与 OpenClaw 官方无隶属关系</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
